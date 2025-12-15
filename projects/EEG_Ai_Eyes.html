@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEG AI Eyes – Project</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #4a6bff;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.3rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+        }
+
+        img.preview {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-top: 35px;
+            border-left: 4px solid #4a6bff;
+            padding-left: 10px;
+        }
+
+        .btn-group {
+            margin-top: 20px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        a.button {
+            background: #4a6bff;
+            color: white;
+            padding: 10px 16px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        a.button:hover {
+            background: #354bcc;
+        }
+
+        pre {
+            background: #1a1a1a;
+            color: #eee;
+            padding: 12px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            background: #1a1a1a;
+            padding: 20px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div  style=" text-align: center; margin-top: 40px;" class="btn-group">
+    <a href="../index.html" class="button">🏠 Back to Portfolio</a>
+</div>
+    <h1>EEG AI – Eye State Classification</h1>
+    <p>Machine learning model predicting open/closed eyes from EEG • 92% accuracy</p>
+</header>
+
+<div class="container">
+
+    <img src="../images/EEG_AI_preview.png" class="preview" alt="EEG Project Preview">
+
+    <h2>📌 Project Overview</h2>
+    <p>
+        This project uses the <strong>EEG Eye State</strong> dataset to classify whether a person's eyes 
+        were <strong>open</strong> or <strong>closed</strong> based on 14 EEG features.
+        The final model (Random Forest) reaches an accuracy of <strong>92%</strong>.
+    </p>
+
+    <div class="btn-group">
+        <a href="https://github.com/ethics-neuro-ai/EEG_Ai_Eyes" target="_blank" class="button">🔗 GitHub Repository</a>
+        <a href="https://raw.githubusercontent.com/ethics-neuro-ai/EEG_Ai_Eyes/main/models/rf_model.pkl" class="button">⬇️ Download Model</a>
+        <a href="https://github.com/ethics-neuro-ai/EEG_Ai_Eyes/blob/main/notebooks/explorations.ipynb/exploration.ipynb" class="button">📓 Data Exploration Notebook</a>
+    </div>
+
+    <h2>🧠 Dataset</h2>
+    <p>
+        The dataset includes:
+    </p>
+    <ul>
+        <li>14 EEG features</li>
+        <li>14,980 samples</li>
+        <li>Binary label (0 = eyes open, 1 = eyes closed)</li>
+    </ul>
+
+    <h2>⚙️ Technologies</h2>
+    <ul>
+        <li>Python 3.x</li>
+        <li>Scikit-learn</li>
+        <li>Pandas & NumPy</li>
+        <li>LIAC-ARFF</li>
+    </ul>
+
+    <h2>📂 Project Structure</h2>
+    <pre>
+EEG_AI_Eyes/
+│
+├── data/
+│   └── EEG_Eye_State.arff
+│
+├── models/
+│   ├── rf_model.pkl
+│   └── scaler.pkl
+│
+├── src/
+│   ├── train_model.py
+│   ├── predict.py
+│   └── preprocessing.py
+│
+└── notebooks/
+    └── exploration.ipynb
+    </pre>
+
+    <h2>▶️ CLI Demo</h2>
+    <pre>
+python src/predict.py
+
+Insert 14 EEG values:
+> 0.50, 0.33, 0.12, ...
+
+Output:
+> Eyes open
+    </pre>
+
+<div  style=" text-align: center; margin-top: 40px;" class="btn-group">
+    <a href="../index.html" class="button">🏠 Back to Portfolio</a>
+</div>
+</div>
+
+<footer>
+    © 2025 — EEG AI Eyes Project
+</footer>
+
+</body>
+</html>

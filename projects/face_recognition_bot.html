@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition Bot – Project</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #4a6bff;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.3rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+        }
+
+        img.preview {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-top: 35px;
+            border-left: 4px solid #4a6bff;
+            padding-left: 10px;
+        }
+
+        .btn-group {
+            margin-top: 20px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        a.button {
+            background: #4a6bff;
+            color: white;
+            padding: 10px 16px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        a.button:hover {
+            background: #354bcc;
+        }
+
+        pre {
+            background: #1a1a1a;
+            color: #eee;
+            padding: 12px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            background: #1a1a1a;
+            padding: 20px;
+            margin-top: 60px;
+        }
+        img.preview {
+        width: 100%;            
+        max-height: 300px;      
+        object-fit: cover;      
+        border-radius: 12px;
+        margin-bottom: 20px;
+}
+    </style>
+</head>
+<body>
+
+<header>
+    <div  style=" text-align: center; margin-top: 40px;" class="btn-group">
+    <a href="../index.html" class="button">🏠 Back to Portfolio</a>
+    </div>
+    <h1>Face Recognition Bot</h1>
+    <p>Telegram bot for face enrollment & identity verification using AI/ML</p>
+</header>
+
+<div class="container">
+
+    <!-- Replace src with your actual preview image path -->
+    <img src="../images/bio-sys.png" class="preview" alt="Face Recognition Bot Preview">
+
+    <h2>📌 Project Overview</h2>
+    <p>
+        Face Recognition Bot is a Telegram bot that allows users to enroll faces and verify identities.
+        Users can send a photo to the bot to <strong>enroll</strong> a face (embedding creation)
+        or send a new photo to verify which registered identity it matches — all in real time.
+    </p>
+
+    <div class="btn-group">
+        <a href="https://github.com/ethics-neuro-ai/Face_Recognition_bot" target="_blank" class="button">🔗 GitHub Repository</a>
+        <a href="https://github.com/ethics-neuro-ai/Face_Recognition_bot/blob/main/telegram_bot.js" class="button">🤖 Bot Code (JS)</a>
+        <a href="https://github.com/ethics-neuro-ai/Face_Recognition_bot/blob/main/face_onlyVerification.py" class="button">🧠 Recognition Module (Python)</a>
+    </div>
+
+    <h2>✨ Features</h2>
+    <ul>
+        <li>Face Enrollment: send a photo to register a face in the database.</li>
+        <li>Face Recognition: verify a new photo against enrolled faces and return the closest match.</li>
+        <li>Identity Management: add, modify, or remove identities and list registered users.</li>
+        <li>Hybrid Bot: Telegram bot logic in JavaScript/Node.js + Python modules for face recognition.</li>
+    </ul>
+
+    <h2>⚙️ Tech Stack</h2>
+    <ul>
+        <li>Node.js / JavaScript — Telegram Bot API integration</li>
+        <li>Python 3 — face recognition / embedding extraction modules</li>
+        <li>Database / Storage: JSON / SQLite or local storage</li>
+        <li>Computer vision libraries for face recognition (e.g., face_recognition)</li>
+    </ul>
+
+    <h2>📂 Project Structure</h2>
+    <pre>
+Face_Recognition_bot/
+│
+├── app/
+│   ├── telegram_bot.js
+│   ├── face_onlyVerification.py
+│   └── ...
+│
+├── data/           # enrolled faces / embeddings / database
+├── images/         # screenshots / demo images of the bot
+├── notebooks/      # experiments / exploration notebooks (if any)
+├── README.md
+└── requirements.txt / package.json
+    </pre>
+
+    <div  style=" text-align: center; margin-top: 40px;" class="btn-group">
+    <a href="../index.html" class="button">🏠 Back to Portfolio</a>
+</div>
+</div>
+
+<footer>
+    © 2025 — Face Recognition Bot Project
+</footer>
+
+</body>
+</html>

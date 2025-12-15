@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sequencer2D_Vanilla – Project</title>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: #4a6bff;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.3rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+
+    img.preview {
+      width: 100%;
+      max-height: 280px;        
+      object-fit: cover;        
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-top: 35px;
+      border-left: 4px solid #4a6bff;
+      padding-left: 10px;
+    }
+
+    .btn-group {
+      margin-top: 20px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    a.button {
+      background: #4a6bff;
+      color: white;
+      padding: 10px 16px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    a.button:hover {
+      background: #354bcc;
+    }
+
+    pre {
+      background: #1a1a1a;
+      color: #eee;
+      padding: 12px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+
+    footer {
+      text-align: center;
+      color: white;
+      background: #1a1a1a;
+      padding: 20px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div  style=" text-align: center; margin-top: 40px;" class="btn-group">
+    <a href="../index.html" class="button">🏠 Back to Portfolio</a>
+</div>
+    <h1>Sequencer2D_Vanilla</h1>
+    <p>Re‑implementation of “Sequencer: Deep LSTM for Image Classification” with 2D BiLSTM models</p>
+  </header>
+
+  <div class="container">
+
+    <!-- Replace src with your actual preview image path -->
+    <img src="../images/vanilla.png" class="preview" alt="Sequencer2D Vanilla Preview">
+
+    <h2>📌 Project Overview</h2>
+    <p>
+      Sequencer2D_Vanilla is a project that re‑implements the architecture described in the paper 
+      <em>“Sequencer: Deep LSTM for Image Classification”</em>, using 2D BiLSTM (horizontal + vertical) and vanilla BiLSTM models. :contentReference[oaicite:1]{index=1}
+      The implementation includes training experiments (on a subset of CIFAR-10 due to hardware constraints), and provides several model variants: “Small”, “Medium” and a simpler vanilla BiLSTM baseline. :contentReference[oaicite:3]{index=3}
+    </p>
+
+    <div class="btn-group">
+      <a href="https://github.com/ethics-neuro-ai/Sequencer2D_Vanilla" target="_blank" class="button">🔗 GitHub Repository</a>
+      <a href="../notebooks/Sequencer2D_Vanilla_all_models.ipynb" class="button">📓 All‑Models Notebook</a>
+      <a href="../notebooks/VanillaSequencer_Plain.ipynb" class="button">🧠 Vanilla BiLSTM Notebook</a>
+    </div>
+
+    <h2>✨ Features & Architecture</h2>
+    <ul>
+      <li>2D sequence modeling: BiLSTM2D replaces attention/self‑attention layers for images. :contentReference[oaicite:4]{index=4}</li>
+      <li>Variants: “Small” and “Medium” Sequencer2D models, plus a vanilla BiLSTM baseline. :contentReference[oaicite:5]{index=5}</li>
+      <li>Patch embedding + sequential processing + classification — inspired by the original Sequencer paper design. :contentReference[oaicite:6]{index=6}</li>
+      <li>Evaluation on CIFAR‑10 (subset): results with accuracy reported for each model. :contentReference[oaicite:7]{index=7}</li>
+    </ul>
+
+    <h2>⚙️ Tech Stack & Dependencies</h2>
+    <ul>
+      <li>Python 3.x</li>
+      <li>Torch / torchvision</li>
+      <li>NumPy, Pandas, Matplotlib</li>
+      <li>Jupyter Notebooks for experiments & evaluation</li>
+    </ul>
+
+    <h2>📂 Project Structure</h2>
+    <pre>
+Sequencer2D_Vanilla/
+│
+├── notebooks/
+│   ├── Sequencer2D_Vanilla_all_models.ipynb
+│   ├── SequencerModelchanged384S.ipynb
+│   ├── SequencerModelchanged384M.ipynb
+│   └── VanillaSequencer_Plain.ipynb
+│
+├── requirements.txt
+├── README.md
+└── (models / checkpoints & results, as produced by the notebooks)
+    </pre>
+
+    <h2>▶️ Example Usage</h2>
+    <p>Run the notebooks directly — each contains model definition, training loop & evaluation on CIFAR‑10 subset. :contentReference[oaicite:8]{index=8}</p>
+    <div  style=" text-align: center; margin-top: 40px;" class="btn-group">
+    <a href="../index.html" class="button">🏠 Back to Portfolio</a>
+</div>
+  </div>
+
+  <footer>
+    © 2025 — Sequencer2D_Vanilla Project
+  </footer>
+
+</body>
+</html>

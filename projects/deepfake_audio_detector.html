@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Deepfake Detector – Project</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #4a6bff;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.3rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+        }
+
+        img.preview {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-top: 35px;
+            border-left: 4px solid #4a6bff;
+            padding-left: 10px;
+        }
+
+        .btn-group {
+            margin-top: 20px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        a.button {
+            background: #4a6bff;
+            color: white;
+            padding: 10px 16px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        a.button:hover {
+            background: #354bcc;
+        }
+
+        pre {
+            background: #1a1a1a;
+            color: #eee;
+            padding: 12px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            background: #1a1a1a;
+            padding: 20px;
+            margin-top: 60px;
+        }
+        
+    </style>
+</head>
+<body>
+
+<header>
+    <div  style=" text-align: center; margin-top: 40px;" class="btn-group">
+    <a href="../index.html" class="button">🏠 Back to Portfolio</a>
+</div>
+    <h1>Audio Deepfake Detector</h1>
+    <p>Detect fake vs real audio and analyze speech using deep learning & ML models</p>
+</header>
+
+<div class="container">
+    
+
+    <img src="../images/deepfakechecker.jpg" class="preview" alt="Audio Project Preview">
+
+    <h2>📌 Project Overview</h2>
+    <p>
+        This project implements audio analysis tools using machine learning and deep learning models.
+        Users can detect <strong>fake vs real</strong> audio, generate spectrograms, transcribe speech using Whisper,
+        and compare speakers using the SpeechBrain library.
+    </p>
+
+    <div class="btn-group">
+        <a href="https://github.com/ethics-neuro-ai/DeepFake_AudioDetector" target="_blank" class="button">🔗 GitHub Repository</a>
+        <a href="../models/new_best_model_.pth" class="button">⬇️ Download Model</a>
+        <a href="../notebooks/exploration.ipynb" class="button">📓 Data Exploration Notebook</a>
+    </div>
+
+    <h2>🧠 Dataset & Pretrained Models</h2>
+    <ul>
+        <li>Audio samples (WAV format)</li>
+        <li>Labels: Fake / Real</li>
+        <li>Pretrained CNN Transformer model: <strong>new_best_model_.pth</strong></li>
+        <li>Other ML models: Logistic Regression, MLP, Random Forest</li>
+    </ul>
+
+    <h2>⚙️ Technologies</h2>
+    <ul>
+        <li>Python 3.x</li>
+        <li>PyTorch & TorchAudio</li>
+        <li>SpeechBrain & Whisper</li>
+        <li>Flask & Flask-CORS</li>
+        <li>NumPy, Pandas, Matplotlib</li>
+    </ul>
+
+    <h2>📂 Project Structure</h2>
+    <pre>
+audio_deepfake_detector/
+│
+├── models/
+│   └── new_best_model_.pth
+│
+├── utils/
+│   ├── cnnt_predict.py
+│   ├── cnnt_moodel.py
+│   └── modelcnn.py
+│
+├── src/
+│   └── run_desktopapp.py
+│
+├── templates/
+│   └── index.html
+│
+├── static/
+│   └── ...
+│
+├── notebooks/
+│   └── exploration.ipynb
+│
+└── app.py
+    </pre>
+
+    <h2>▶️ CLI Demo</h2>
+    <pre>
+python src/run_desktopapp.py
+
+Upload WAV file:
+> audio_sample.wav
+
+Output:
+> Prediction: Fake
+> Confidence: 0.87
+    </pre>
+
+<div  style=" text-align: center; margin-top: 40px;" class="btn-group">
+    <a href="../index.html" class="button">🏠 Back to Portfolio</a>
+</div>
+
+</div>
+
+
+
+<footer>
+    © 2025 — Audio Deepfake Detector Project
+</footer>
+
+</body>
+</html>

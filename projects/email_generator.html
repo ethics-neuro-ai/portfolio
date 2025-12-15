@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Generator with LLM – Project</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #4a6bff;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.3rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+        }
+
+        img.preview {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-top: 35px;
+            border-left: 4px solid #4a6bff;
+            padding-left: 10px;
+        }
+
+        .btn-group {
+            margin-top: 20px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        a.button {
+            background: #4a6bff;
+            color: white;
+            padding: 10px 16px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        a.button:hover {
+            background: #354bcc;
+        }
+
+        pre {
+            background: #1a1a1a;
+            color: #eee;
+            padding: 12px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            background: #1a1a1a;
+            padding: 20px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div  style=" text-align: center; margin-top: 40px;" class="btn-group">
+    <a href="../index.html" class="button">🏠 Back to Portfolio</a>
+</div>
+    <h1>Email Generator with LLM</h1>
+    <p>Generate realistic emails using Google FLAN-T5-Small and the Eeron dataset</p>
+</header>
+
+<div class="container">
+
+    <img src="../images/email_generator.png" class="preview" alt="Email Generator Preview">
+
+    <h2>📌 Project Overview</h2>
+    <p>
+        This project implements an email generator using a Large Language Model (LLM).
+        It uses <strong>Google FLAN-T5-Small</strong> fine-tuned on the <strong>Eeron</strong> email dataset from Kaggle.
+        Users can generate professional emails automatically from custom prompts, specifying tone and context.
+    </p>
+
+    <div class="btn-group">
+        <a href="https://github.com/ethics-neuro-ai/email_generator" target="_blank" class="button">🔗 GitHub Repository</a>
+         </div>
+
+    <h2>🧠 Dataset & Model</h2>
+    <ul>
+        <li>Dataset: Eeron email dataset (Kaggle)</li>
+        <li>Labels: Email subject, body, tone</li>
+        <li>Model: Google FLAN-T5-Small</li>
+        <li>Fine-tuned for generating realistic email text</li>
+    </ul>
+
+    <h2>⚙️ Technologies</h2>
+    <ul>
+        <li>Python 3.x</li>
+        <li>Hugging Face Transformers</li>
+        <li>PyTorch</li>
+        <li>Pandas, NumPy</li>
+    </ul>
+
+    <h2>📂 Project Structure</h2>
+    <pre>
+email-generator-llm/
+│
+├── models/
+│   └── flan-t5-small-finetuned/
+│
+├── notebooks/
+│   ├── fine_tuning.ipynb
+│   └── example_generation.ipynb
+│
+├── src/
+│   └── generate_email.py
+│
+├── data/
+│   └── eeron_emails.csv
+│
+├── README.md
+└── requirements.txt
+    </pre>
+
+    <h2>▶️ Example Usage</h2>
+    <pre>
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+
+tokenizer = AutoTokenizer.from_pretrained("models/flan-t5-small-finetuned")
+model = AutoModelForSeq2SeqLM.from_pretrained("models/flan-t5-small-finetuned")
+
+prompt = "Write a formal email requesting project update."
+inputs = tokenizer(prompt, return_tensors="pt")
+outputs = model.generate(**inputs, max_length=200)
+email = tokenizer.decode(outputs[0], skip_special_tokens=True)
+print(email)
+    </pre>
+<div  style=" text-align: center; margin-top: 40px;" class="btn-group">
+    <a href="../index.html" class="button">🏠 Back to Portfolio</a>
+</div>
+</div>
+
+<footer>
+    © 2025 — Email Generator Project
+</footer>
+
+</body>
+</html>
