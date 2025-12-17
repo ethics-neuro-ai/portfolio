@@ -8,55 +8,45 @@ body {
     line-height: 1.6;
 }
 
+/* HERO HEADER */
 .hero-header {
-    position: relative;
+    display: flex;
+    flex-wrap: wrap;           /* allow wrapping on small screens */
+    justify-content: center;    /* center horizontally */
+    align-items: flex-start;    /* align top of sections */
+    gap: 2rem;                  /* space between side-left and central */
+    padding: 2rem;
     background: url('../images/backgroundheader.jpg') no-repeat center center;
     background-size: cover;
-    text-align: center;
-    padding: 4rem 2rem;
     color: white;
-    min-height: 500px;
 }
 
-/* Contenido central arriba */
-.hero-central {
-    display: inline-block;           /* shrink background to text */
-    background: rgba(0, 0, 0, 0.5);  /* semi-transparent black */
-    padding: 1rem 2rem;              /* space around text */
-    border-radius: 8px;              /* optional, looks nicer */
-}
-
-.hero-central h1,
-.hero-central p {
-    color: white;
-    text-shadow: none;               /* optional, can keep */
-}
-
-
-
-/* Contenido a la izquierda, más bajo */
+/* LEFT SIDE (photo + general info) */
 .hero-side-left {
-    position: absolute;
-    left: 2rem;         /* espacio desde el borde izquierdo */
-    bottom: 2rem;       /* más bajo en el header */
     display: flex;
+    flex-direction: column;    /* stack photo and info */
     align-items: center;
-    gap: 1rem;
-    background: rgba(0,0,0,0.5); /* opcional, para legibilidad */
+    background: rgba(0,0,0,0.5);
     padding: 1rem;
     border-radius: 10px;
+    flex: 1 1 250px;           /* flexible width with min 250px */
 }
 
-/* Foto */
+/* PHOTO */
 .hero-photo {
     width: 150px;
     height: 150px;
     border-radius: 80%;
     object-fit: cover;
     border: 2px solid #fff;
+    margin-bottom: 1rem;
 }
 
-/* Info a la derecha de la foto */
+/* GENERAL INFO */
+.hero-info {
+    text-align: center;
+}
+
 .hero-info h2 {
     margin: 0 0 0.5rem 0;
     font-size: 1.2rem;
@@ -66,6 +56,34 @@ body {
     margin: 0;
     font-size: 0.9rem;
 }
+
+/* CENTRAL CONTENT */
+.hero-central {
+    background: rgba(0,0,0,0.5);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    flex: 2 1 400px;   /* take remaining space */
+}
+
+/* --- RESPONSIVE: stack vertically on small screens --- */
+@media (max-width: 768px) {
+    .hero-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-side-left, 
+    .hero-central {
+        width: 90%;
+        flex: 1 1 100%;
+    }
+
+    .hero-central {
+        margin-top: 1rem;
+        text-align: center;
+    }
+}
+
 
 
 main {
