@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EEG AI Eyes – Project</title>
+    <title>EEGNet Epoch-Level – Project</title>
 
     <style>
         body {
@@ -89,28 +89,28 @@
 <body>
 
 <header>
-    <div  style=" text-align: center; margin-top: 40px;" class="btn-group">
-    <a href="../index.html" class="button">🏠 Back to Portfolio</a>
-</div>
-    <h1>EEG AI – Eye State Classification</h1>
-    <p>Machine learning model predicting open/closed eyes from EEG • 92% accuracy</p>
+    <div style="text-align: center; margin-top: 40px;" class="btn-group">
+        <a href="../index.html" class="button">🏠 Back to Portfolio</a>
+    </div>
+    <h1>EEGNet Epoch-Level – Sleep Deprivation EEG</h1>
+    <p>EEGNet model predicting sleep deprivation states from resting-state EEG • ~96% accuracy</p>
 </header>
 
 <div class="container">
 
-    <img src="../images/EEG_AI_preview.png" class="preview" alt="EEG Project Preview">
+    <img src="../images/eeg-guide-hero-image.png" class="preview" alt="EEGNet Project Preview">
 
     <h2>📌 Project Overview</h2>
     <p>
-        This project uses the <strong>EEG Eye State</strong> dataset to classify whether a person's eyes 
-        were <strong>open</strong> or <strong>closed</strong> based on 14 EEG features.
-        The final model (Random Forest) reaches an accuracy of <strong>92%</strong>.
+        This project uses the <strong>Sleep Deprivation EEG dataset</strong> to classify resting-state EEG epochs.
+        The model is trained at the <strong>epoch level</strong>, aggregating EEG data from all subjects.
+        It can distinguish EEG patterns between normal sleep and sleep-deprived sessions with high accuracy (~96%).
     </p>
 
     <div class="btn-group">
-        <a href="https://github.com/ethics-neuro-ai/EEG_Ai_Eyes" target="_blank" class="button">🔗 GitHub Repository</a>
-        <a href="https://raw.githubusercontent.com/ethics-neuro-ai/EEG_Ai_Eyes/main/models/rf_model.pkl" class="button">⬇️ Download Model</a>
-        <a href="https://github.com/ethics-neuro-ai/EEG_Ai_Eyes/blob/main/notebooks/explorations.ipynb/exploration.ipynb" class="button">📓 Data Exploration Notebook</a>
+        <a href="https://github.com/ethics-neuro-ai/EEGNet_Epoch_Level" target="_blank" class="button">🔗 GitHub Repository</a>
+        <a href="https://raw.githubusercontent.com/ethics-neuro-ai/EEGNet_Epoch_Level/main/models/eegnet_model.h5" class="button">⬇️ Download Model</a>
+        <a href="https://github.com/ethics-neuro-ai/EEGNet_Epoch_Level/blob/main/notebooks/epoch_level_training.ipynb" class="button">📓 Training Notebook</a>
     </div>
 
     <h2>🧠 Dataset</h2>
@@ -118,57 +118,53 @@
         The dataset includes:
     </p>
     <ul>
-        <li>14 EEG features</li>
-        <li>14,980 samples</li>
-        <li>Binary label (0 = eyes open, 1 = eyes closed)</li>
+        <li>71 participants</li>
+        <li>Resting-state EEG (eyes open/closed)</li>
+        <li>Two sessions: Normal Sleep (NS) and Sleep Deprivation (SD)</li>
+        <li>Behavioral measures of sleepiness and mood</li>
+        <li>EEG preprocessed into epochs (~2s, 61 channels)</li>
     </ul>
 
     <h2>⚙️ Technologies</h2>
     <ul>
         <li>Python 3.x</li>
-        <li>Scikit-learn</li>
-        <li>Pandas & NumPy</li>
-        <li>LIAC-ARFF</li>
+        <li>TensorFlow & Keras</li>
+        <li>MNE-Python</li>
+        <li>NumPy & Pandas</li>
     </ul>
 
     <h2>📂 Project Structure</h2>
     <pre>
-EEG_AI_Eyes/
+EEGNet_Epoch_Level/
 │
-├── data/
-│   └── EEG_Eye_State.arff
-│
-├── models/
-│   ├── rf_model.pkl
-│   └── scaler.pkl
-│
-├── src/
-│   ├── train_model.py
-│   ├── predict.py
-│   └── preprocessing.py
-│
-└── notebooks/
-    └── exploration.ipynb
+├── data/               # Raw EEG .set/.fdt files (not included)
+├── saved_models/
+│   └── eegnet_sleep_deperivation_model.keras
+├── notebooks/
+│   └── deeepl_eegnet_epoch.ipynb
+└── README.md
     </pre>
 
-    <h2>▶️ CLI Demo</h2>
+    <h2>▶️ CLI / Notebook Demo</h2>
     <pre>
-python src/predict.py
+# Run the notebook to train and evaluate EEGNet
+jupyter notebook notebooks/deeepl_eegnet_epoch.ipynb
 
-Insert 14 EEG values:
-> 0.50, 0.33, 0.12, ...
+# Load pretrained model for prediction:
+from tensorflow.keras.models import load_model
+model = load_model('models/eegnet_sleep_deperivation_model.keras')
 
-Output:
-> Eyes open
+# Predict on new EEG epochs:
+preds = model.predict(X_new)
     </pre>
 
-<div  style=" text-align: center; margin-top: 40px;" class="btn-group">
-    <a href="../index.html" class="button">🏠 Back to Portfolio</a>
-</div>
+    <div style="text-align: center; margin-top: 40px;" class="btn-group">
+        <a href="../index.html" class="button">🏠 Back to Portfolio</a>
+    </div>
 </div>
 
 <footer>
-    © 2025 — EEG AI Eyes Project
+    © 2026 — EEGNet Epoch-Level Project
 </footer>
 
 </body>
