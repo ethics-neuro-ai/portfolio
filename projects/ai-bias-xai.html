@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Bias Detection – Project</title>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: #4a6bff;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.3rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+
+    img.preview {
+      width: 100%;
+      max-height: 280px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-top: 35px;
+      border-left: 4px solid #4a6bff;
+      padding-left: 10px;
+    }
+
+    .btn-group {
+      margin-top: 20px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    a.button {
+      background: #4a6bff;
+      color: white;
+      padding: 10px 16px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    a.button:hover {
+      background: #354bcc;
+    }
+
+    pre {
+      background: #1a1a1a;
+      color: #eee;
+      padding: 12px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+
+    footer {
+      text-align: center;
+      color: white;
+      background: #1a1a1a;
+      padding: 20px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div style="text-align: center; margin-top: 40px;" class="btn-group">
+    <a href="../index.html" class="button">🏠 Back to Portfolio</a>
+  </div>
+  <h1>AI Bias Detection with XAI</h1>
+  <p>Fairness Analysis of Machine Learning Models using Explainable AI in R</p>
+</header>
+
+<div class="container">
+
+  <!-- Replace with your image -->
+  <img src="../images/gender_bias.png" class="preview" alt="AI Bias Project Preview">
+
+  <h2>📌 Project Overview</h2>
+  <p>
+    This project investigates <strong>bias in machine learning models</strong> using the Adult Income dataset.
+    A Random Forest classifier is trained to predict income, and fairness is evaluated across
+    demographic groups such as gender and race.
+    <br><br>
+    Explainable AI (XAI) techniques, including <strong>SHAP values</strong> and <strong>partial dependence plots</strong>,
+    are used to understand model decisions and improve transparency.
+  </p>
+
+  <div class="btn-group">
+    <a href="https://github.com/ethics-neuro-ai/ai-bias-detection-xai-r/" target="_blank" class="button">🔗 GitHub Repository</a>
+  </div>
+
+  <h2>✨ Features</h2>
+  <ul>
+    <li>Bias detection across gender and race</li>
+    <li>Random Forest classification model</li>
+    <li>SHAP explanations for individual predictions</li>
+    <li>Feature importance analysis</li>
+    <li>Partial dependence plots (global explainability)</li>
+    <li>Automatic saving of results (CSV, PNG, TXT)</li>
+  </ul>
+
+  <h2>⚙️ Tech Stack</h2>
+  <ul>
+    <li>R programming language</li>
+    <li>randomForest</li>
+    <li>iml (Explainable AI)</li>
+    <li>dplyr, ggplot2</li>
+  </ul>
+
+  <h2>📊 Results</h2>
+  <ul>
+    <li>Bias metrics showing differences in prediction rates</li>
+    <li>Visualization of fairness across groups</li>
+    <li>Identification of most influential features</li>
+    <li>Transparent explanations using SHAP</li>
+  </ul>
+
+  <h2>📂 Project Structure</h2>
+  <pre>
+ai-bias-detection-xai-r/
+│
+├── data/
+│   └── adult_income.csv
+│
+├── scripts/
+│   └── bias_analysis.R
+│
+├── results/
+│   ├── gender_bias.csv
+│   ├── race_bias.csv
+│   ├── feature_importance.csv
+│   ├── shap_row1.png
+│   ├── gender_bias_plot.png
+│   └── summary_report.txt
+│
+├── README.md
+└── .gitignore
+  </pre>
+
+  <h2>▶️ How to Run</h2>
+  <p>Run the R script after installing dependencies:</p>
+
+  <pre>
+install.packages(c("randomForest", "caret", "iml", "dplyr", "ggplot2"))
+
+source("scripts/bias_analysis.R")
+  </pre>
+
+  <h2>⚖️ Ethical Considerations</h2>
+  <p>
+    This project highlights how AI systems can produce biased outcomes.
+    It emphasizes the importance of:
+  </p>
+  <ul>
+    <li>Fairness in machine learning</li>
+    <li>Transparency and explainability</li>
+    <li>Responsible AI development</li>
+  </ul>
+
+  <div style="text-align: center; margin-top: 40px;" class="btn-group">
+    <a href="../index.html" class="button">🏠 Back to Portfolio</a>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 — AI Bias Detection Project
+</footer>
+
+</body>
+</html>
