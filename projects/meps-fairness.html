@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthcare Fairness Audit – Project</title>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: #4a6bff;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.3rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+
+    img.preview {
+      width: 100%;
+      max-height: 280px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-top: 35px;
+      border-left: 4px solid #4a6bff;
+      padding-left: 10px;
+    }
+
+    .btn-group {
+      margin-top: 20px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    a.button {
+      background: #4a6bff;
+      color: white;
+      padding: 10px 16px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    a.button:hover {
+      background: #354bcc;
+    }
+
+    pre {
+      background: #1a1a1a;
+      color: #eee;
+      padding: 12px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+
+    footer {
+      text-align: center;
+      color: white;
+      background: #1a1a1a;
+      padding: 20px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div style="text-align: center; margin-top: 40px;" class="btn-group">
+    <a href="../index.html" class="button">🏠 Back to Portfolio</a>
+  </div>
+  <h1>Algorithmic Fairness & Constrained AI Optimization</h1>
+  <p>Auditing Structural Disparities and Mitigating Allocative Harms in Healthcare Access using Fairlearn</p>
+</header>
+
+<div class="container">
+
+  <!-- Replace with your image -->
+  <img src="../images/bio-sys.png" class="preview" alt="Healthcare Fairness Project Preview">
+
+  <h2>📌 Project Overview</h2>
+  <p>
+    This project investigates how systemic socioeconomic inequalities encode themselves into machine learning models within healthcare utilization pipelines. Using a survey-weighted microdata extract from the <strong>IPUMS Medical Expenditure Panel Survey (MEPS)</strong>, a predictive system is audited to evaluate allocative harms concerning low-income populations.
+    <br><br>
+    By moving beyond "fairness through unawareness", the workflow implements active multi-model optimization using the <strong>Fairlearn framework</strong> to enforce mathematical parity constraints and navigate complex socio-technical trade-offs.
+  </p>
+
+  <div class="btn-group">
+    <a href="https://github.com/ethics-neuro-ai/meps-fairness-fairlearn" target="_blank" class="button">🔗 GitHub Repository</a>
+  </div>
+
+  <h2>✨ Features</h2>
+  <ul>
+    <li>Pre-modeling disparity mapping via survey-weighted Nightingale Rose Charts [137]</li>
+    <li>Evaluation of "Fairwashing" mechanics within standard unaware classifiers [137]</li>
+    <li>Sample re-weighting audits to expose true baseline error differentials [137]</li>
+    <li>Post-processing optimization assessment via ThresholdOptimizer [137]</li>
+    <li>In-processing grid search optimizations under Demographic Parity and Equalized Odds boundaries [137]</li>
+    <li>Multi-objective performance mapping across the fairness-accuracy Pareto frontier [137]</li>
+  </ul>
+
+  <h2>⚙️ Tech Stack</h2>
+  <ul>
+    <li>Python / Jupyter Notebook [137]</li>
+    <li>Fairlearn (Algorithmic Mitigation Framework) [137]</li>
+    <li>Scikit-learn (Machine Learning Engine) [137]</li>
+    <li>Pandas, NumPy, Matplotlib, Jupytext [137]</li>
+  </ul>
+
+  <h2>📊 Results</h2>
+  <ul>
+    <li>Exposed a severe ~98% False Negative Rate (FNR) disparity gap during initial baseline audits [137].</li>
+    <li>Demonstrated the failure modes of naive class re-weighting and post-processing on uncalibrated healthcare features [137].</li>
+    <li>Achieved optimal deployment balance via Equalized Odds GridSearch, shrinking the low-income FNR to 31.1% while preserving predictive utility [137].</li>
+  </ul>
+
+  <h2>📂 Project Structure</h2>
+  <pre>
+meps-fairness-fairlearn/
+│
+├── README.md
+├── meps_fairness_data.csv.gz
+├── plot_meps_healthcare_delay.ipynb
+└── plot_meps_healthcare_delay.py
+  </pre>
+
+  <h2>▶️ How to Run</h2>
+  <p>Clone the repository and run the setup using pip:</p>
+
+  <pre>
+git clone https://github.com
+cd meps-fairness-fairlearn
+
+pip install fairlearn scikit-learn pandas numpy matplotlib requests jupytext
+
+# (Optional) Regenerate the Jupyter notebook with local outputs
+jupytext --to notebook plot_meps_healthcare_delay.py
+  </pre>
+
+  <h2>⚖️ Ethical Considerations</h2>
+  <p>
+    When statistical estimators misclassify economically vulnerable individuals as "not at risk of delaying care" due to a lower baseline of interaction metrics, they codify allocative harms. This project highlights why sensitive socioeconomic domains require:
+  </p>
+  <ul>
+    <li>Rigorous integration of national survey sampling weights (PERWEIGHT) to preserve scientific validity [137].</li>
+    <li>Active mitigation algorithms rather than superficial statistical blindness [137].</li>
+    <li>Multi-objective optimization to guarantee equitable resource distribution [137].</li>
+  </ul>
+
+  <div style="text-align: center; margin-top: 40px;" class="btn-group">
+    <a href="../index.html" class="button">🏠 Back to Portfolio</a>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 — Healthcare Fairness Audit Project
+</footer>
+
+</body>
+</html>
